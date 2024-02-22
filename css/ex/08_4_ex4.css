@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100vw;
+    height: 20vh;
+    background-color: blueviolet;
+}
+
+main {
+    width: 100vw;
+    height: 60vh;
+    background-color: beige;
+}
+
+footer {
+    width: 100vw;
+    height: 20vh;
+    background-color: black;
+}
+
+aside {
+    width: 30%;
+    height: 100%;
+    background-color: aqua;
+    float: left;
+}
+section {
+    width: 70%;
+    height: 100%;
+    background-color: chocolate;
+    float: left;
+}
+footer {
+    clear: left;
+}

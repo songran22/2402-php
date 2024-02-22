@@ -1,0 +1,61 @@
+div {
+    padding: 20px;
+}
+.main {
+    width: 300px;
+    background-color: pink;
+}
+.div-static {
+    background-color: gray;
+    /* static : 일반적인 문서의 흐름에 맞춰 배치(defoault) */
+    position: static;
+}
+.div-relative {
+    background-color: rgb(17, 235, 17);
+    /* relative : 기본적으로 static과 같으나, 자신의 원래 위치를 기준으로 위치 지정 가능*/  
+     position: relative;
+}
+/* #rel2 {
+    top: 30px;
+    left: 30px;
+} */
+.div-absolute1 {
+    background-color: chocolate;
+    position: absolute;
+    top : 0;
+}
+.div-absolute2 {
+    background-color: rgb(223, 152, 102);
+    position: absolute;
+    top : 100px;
+}
+.div-fixed {
+    background-color: blue;
+    color: #fff;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    z-index: 3;
+}
+.div-sticky{
+    background-color: blueviolet;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+.div-fixed2 {
+    background-color: rgb(0, 255, 213);
+    color: #000000;
+    position: fixed;
+    bottom: 10%;
+    right: 15%;
+    z-index: 2;
+}
+.div-fixed3 {
+    background-color: rgb(236, 234, 64);
+    color: #000000;
+    position: fixed;
+    bottom: 10%;
+    right: 20%;
+    z-index: 1;
+}

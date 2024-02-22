@@ -1,0 +1,12 @@
+.ul-none li strong {
+    list-style-type: none;
+    font-size: 30px;
+    font-family: "Noto Sans KR", sans-serif;
+    color: rgb(196, 8, 8);
+}
+.ul-none {
+    list-style-type: none;
+    font-size: 18px;
+    font-family: "Noto Sans KR", sans-serif;
+    color: black;
+}

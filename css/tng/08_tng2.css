@@ -1,0 +1,23 @@
+body {
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+}
+.div-position1, .div-position2, .div-position3 {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.div-position1 {
+    top: 45px;
+    left: 45px;
+}
+.div-position2 {
+    top: -50px;
+    left: 245px;
+}
+.div-position3 {
+    top: -10px;
+    left: 45px;
+}

@@ -1,0 +1,13 @@
+ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+    background-color: #646464;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    margin-right: -6px;
+}

@@ -1,0 +1,27 @@
+header, footer {
+    margin: 10px;
+    width: 865px;
+}
+.div-1, .div-2, .div-3, .div-4 {
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    border-style: dashed;
+    border-width: 0.7px;
+    border-color: rgb(179, 179, 179);
+    display: block;
+    float: left;
+ }
+p {
+    font-size: 13px;
+}
+.footer {
+    clear: left;
+    height: 50px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: auto;
+    line-height: 50px;
+}
