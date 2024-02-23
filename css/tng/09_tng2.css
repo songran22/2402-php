@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+.container {
+    width: 600px;
+    height: 810px;
+    background-color: #fff;
+    margin: 1rem auto;
+    padding: 2rem;
+    background-size: 40%;
+    background-image: url('../img/mk.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom 1px right 1px;
+    border: 2px dotted #666;
+}
+h1 {
+    color: #fff;
+    background-color: rgb(6, 68, 53);
+    padding: 1.5rem;
+    text-align: center;
+    width: 550px;
+    margin: 0 auto;
+}
+h2 {
+    width: 550px;
+    text-align: center;
+    margin : 2rem auto;
+}
+h3 {
+    color: red;
+    margin: 1rem;
+}
+.li-1, li {
+    margin: 2rem;
+    list-style: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 0.1rem;
+}
