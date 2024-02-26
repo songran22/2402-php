@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 1rem;
+}
+fieldset {
+    padding: 1rem;
+    background-image: url(../img/iwantyou.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 900;
+}
+legend {
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(255, 0, 200);
+}
+.requier::before {
+    content: '*';
+    color: red;
+}
+input:focus, textarea:focus {
+    border: 3px solid red;
+    outline: none;
+}
+input[name="radio"]:checked + label {
+    color: red;
+}
+input, textarea {
+    background : transparent;
+    /* background : none; > 가능 */
+}
+label[for="req"] {
+    vertical-align: top;
+}
+.chk-content {
+    color: #fff;
+    background-color: black;
+    display: none;
+}
+button:hover + .chk-content {
+    display: inline;
+}

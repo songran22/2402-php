@@ -1,0 +1,32 @@
+ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 4px 6px 5px 6px rgb(66, 66, 66);
+}
+li {
+    display: inline-block;
+    background-color: rgb(190, 190, 190);
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: -6px;
+    border-right: 2px solid rgb(0, 255, 0);
+}
+.menu6 {
+    border-right: none;
+}
+.menu1:hover,
+.menu2:hover,
+.menu3:hover,
+.menu4:hover, 
+.menu5:hover {
+    background-color: #4d4d4d;
+    color: white;
+}
+.menu6:hover {
+    background-color: #ff0000;
+    color: white;
+}

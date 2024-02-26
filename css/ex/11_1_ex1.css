@@ -1,0 +1,17 @@
+div {
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/mk.jpg);
+}
+div:hover {
+    animation: test 4s forwards;
+}
+/* forwards > 확대된 상태로 유지 */
+@keyframes test {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(2);
+    }
+}

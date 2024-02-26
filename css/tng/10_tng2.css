@@ -1,0 +1,80 @@
+body {
+    width: 500px;
+    height: 400px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+    background-image: url(../img/dokcer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.title {
+    padding-left: 5px;
+    width: 210px;
+    height: 50px;
+    color: rgb(234, 0, 255);
+    font-size: 18px;
+    top: -65px;
+    position: relative;
+    background-color: white;
+}
+form {
+    position: relative;
+    top: -40px;
+}
+button {
+    position: relative;
+    top: -10px;
+}
+input {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0);
+}
+label {
+    font-weight: 900;
+}
+#name {
+    border: 2px solid black;
+}
+.input-1::before,
+.input-2::before,
+.input-3::before
+ {
+    content: '*';
+    color: red;
+}
+.input-4 {
+    vertical-align: top;
+}
+#name:focus {
+    border: 3px solid red;
+    outline: none;
+}
+#request-box {
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(77, 77, 77);
+}
+#request-box:focus {
+    border: 3px solid red;
+    outline: none;
+}
+.bt::after {
+    content: "내용을 다시 한 번 확인해 주세요.";
+    position: absolute;
+    width: 300px;
+    top: -5px;
+    right: -310px;
+    padding: 2px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: none;
+    font-size: 20px;
+}
+.bt:hover::after {
+    display: block;
+}
+input[type="radio"]:checked + label {
+    color: #ff0000;
+}

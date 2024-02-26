@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    width: 600px;
+    height: 40px;
+    font-size: 0;
+    box-shadow: 0px 5px 5px 5px rgb(83, 83, 83);
+}
+body { 
+    padding: 2rem;
+}
+li {
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    background-color: rgb(185, 185, 185);
+    font-size: 1rem;
+    text-align: center;
+    line-height: 40px;
+    border-right: 2px solid greenyellow;
+}
+/* 마지막 요소 제외 오른쪽 외각선 지정 */
+ul > li:nth-last-child(1) {
+    border: none;
+}
+/* 1~5번 요소 마우스오버 배경색 지정 */
+ul > li:not(:last-child):hover {
+    background-color: rgb(105, 105, 105);
+    color: white;
+}
+/* 마지막 요소 마우스오버 배경색 지정 */
+ul > li:last-child:hover {
+    background-color: red;
+    color: white;
+}
