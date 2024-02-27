@@ -1,0 +1,15 @@
+/* flex box : 행 또는 열 형태로 항목 무리를 배치하는 1차원 레이아웃 시스템 */
+.container {
+    display: flex;
+    /* flex-direction > 주축의 방향을 조절하는 속성*/
+    flex-direction: row;
+    /* flex-wrap > 항목의 줄을 바꿀지 말지를 지정 */
+    flex-wrap: wrap;
+    /* flex-flow > flex-direction과 flex-wrap을 한번에 지정 */
+    flex-flow: row wrap;
+}
+.item {
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+}
