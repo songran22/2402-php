@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fcfcfc;
+}
+.logo {
+    margin : 2.5rem auto;
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/NAVER_CI_Green.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.main_search > form {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-top: 2rem;
+    align-items: center;
+    gap: 20px;
+}
+input[type="search"] {
+    width: 80%;
+    height: 70px;
+    border: 1px solid #1EC800;
+    border-radius: 40px;
+    font-size: 1rem;
+}
+input:focus {
+    border: 1px solid #1EC800;
+    box-shadow: inset 1px 1px 2px 2px #cccccc;
+    outline: none;
+}
+.btn_search {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../img/test_00.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main_icon {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 4rem 10rem;
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+.input_search {
+    margin: 0;
+}
+.icon_img {
+    width: 60px;
+    height: 60px;
+    padding: 4px;
+    border-radius: 18px;
+    border: 0.5px solid rgb(226, 226, 226);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 0.5px 0.5px rgb(211, 211, 211);
+}
+p {
+    padding: 0;
+}
+.sub_main {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+.card_img {
+    padding-top: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.card_info > p {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+.sub_main-2 {
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+.card-2 {
+    background-color: #fff;
+    box-shadow: 0.1px 0.1px 0.1px 0.1px rgb(180, 180, 180);
+    padding: 1rem;
+}
+.card_img-2 {
+    padding-top: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.card_info-2 > p {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+.card_info-22 > p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.sub_main-3 {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
