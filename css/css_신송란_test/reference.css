@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    width: 100%;
+    height: auto;
+    padding: 4rem 0;
+    margin: 0;
+    background-image: url('../css_신송란_test/img/img_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: center;
+    color: #fff;
+}
+.main_title {
+    margin: 3rem 0;
+}
+.sub_title {
+    padding: 0 2rem;
+}
+.container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    padding-bottom: 80px;
+}
+.main_title > h1 {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-weight: 900;
+}
+.sub_title > p {
+    font-size: 1.5rem;
+}
+.btn_title > a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: #d5a400;
+    border: 0;
+    border-radius: 4px;
+    padding: 1rem;
+    color: #fff;
+    display: inline-block;
+    scroll-behavior: smooth;
+}
+.btn_title {
+    width: 100%;
+    padding-top: 2rem;
+}
+.card {
+    height: auto;
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card_img {
+    padding-top: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.card_text {
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 4px solid rgb(87, 87, 87);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+.card > a {
+    text-decoration: none;
+    color: #fff;
+}
+.card > p {
+    padding-bottom: 30px;
+}
+.btn_card {
+    background-color: #d5a400;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+.fixed {
+    width: 100%;
+    height: 4rem;
+    color: #fff;
+    font-size: 0.7rem;
+    background-color: #333333;
+    line-height: 4rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+.btn_title:hover {
+    opacity: 60%;
+    transition-duration: 1.2s;
+}
+.btn_card:hover {
+    opacity: 60%;
+    transition-duration: 0.8s;
+}
+html {
+    scroll-behavior: smooth;
+}
