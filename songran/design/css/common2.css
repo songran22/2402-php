@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-main {
+.container {
     font-family: "Noto Sans KR", sans-serif;
     margin: 10px;
     padding: 50px 10px;
@@ -14,6 +14,17 @@ main {
 
 a {
     text-decoration: none;
+}
+
+input, textarea {
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    outline-color: #9fb1ff;
+}
+
+textarea {
+    resize: none;
 }
 
 .my_info > a {
@@ -127,32 +138,190 @@ a {
 }
 
 .board_content {
-    display: grid;
-    width: 400px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    flex-direction: column;
-    background-color: #fff;
+    width: 400px; 
+    margin: 15px auto;    
     border-radius: 20px;
+    position: relative;
 }
 
-.board_content > .content_no {
+.board_content:not(:last-child) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+    background-color: #fff;
+    padding: 10px 0 0 20px;
+}
+
+.update_content {
+    width: 400px; 
+    margin: 15px auto;    
+    border-radius: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    background-color: #fff;
+    padding: 10px 0 0 20px;
+}
+
+.delete_content {
+    width: 400px; 
+    margin: 15px auto;    
+    border-radius: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    background-color: #fff;
+    padding: 10px 0 0 20px;
+}
+
+.content_no {
     font-size: 12px;
+    color: #868686;
+}
+
+.content_title {
+    font-weight: 500;
+}
+
+.content_date {
+    color: #868686;
+    font-size: 14px;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    text-align: right;
+    padding: 10px 20px 10px 0;
+}
+
+.update_date {
+    color: #868686;
+    font-size: 14px;
+    grid-column: 2/4;
+    grid-row: 4/5;
+    text-align: right;
+    padding: 10px 20px 10px 0;
+}
+
+.person_container {  
+    grid-row: 1/3;
+    grid-column: 3/4;
+    align-self: start;
 }
 
 .person_container {
+    grid-row: 1/3;
+    grid-column: 3/4;
+    align-self: start;
     display: flex;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    align-content: center;
-    background-color: #C3C3C3;
-    border-radius: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
 }
 
+.person_circle {
+    background-color: #CCCCCC; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.insert_btn {
+    border: none;
+    background-color: #6F86F5;
+    padding: 7px 12px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
 
+.insert_btn:hover {
+    background-color: #687ad1;
+    transition: 0.7s;
+}
 
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px; 
+}
 
+.pagination {
+    justify-content: center;
+}
 
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+.pagination a.active {
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+    color: #000;
+}
+  
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.btn_container {
+    display: flex;
+    justify-content: flex-end;
+    width: 400px;
+    margin: auto;
+}
+
+.content_btn {
+    border: none;
+    background-color: #6F86F5;
+    padding: 7px 12px;
+    border-radius: 12px;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.content_text2 {
+    font-size: 15px;
+    grid-column: 1/4;
+    grid-row: 2/4;
+    padding: 20px 20px 0 0;
+}
+
+.main-top_center > p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.line-item {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 5px auto;
+}
+
+.line-title {
+    color: #000;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.line-content {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.line-title-textarea {
+    padding-top: 36%;
+}
