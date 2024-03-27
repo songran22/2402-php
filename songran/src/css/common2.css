@@ -164,6 +164,10 @@ textarea {
     padding: 10px 0 0 20px;
 }
 
+.insert_content {
+    margin: 0 auto 15px 0;
+}
+
 .delete_content {
     width: 400px; 
     margin: 15px auto;    
@@ -318,10 +322,13 @@ footer {
 }
 
 .line-content {
+    padding: 6px 0 0 0;
     background-color: #fff;
     border-radius: 10px;
 }
-
+.test {
+    height: 35px;
+}
 .line-title-textarea {
     padding-top: 36%;
 }

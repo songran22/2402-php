@@ -1,8 +1,8 @@
-CREATE DATABASE mini_board;
+CREATE DATABASE big_board;
 
-USE mini_board;
+USE big_board;
 
-CREATE TABLE Boards (
+CREATE TABLE boards (
 	no					INT					PRIMARY KEY AUTO_INCREMENT
 	,title			VARCHAR(100)		NOT NULL
 	,content 		VARCHAR(1000) 		NOT NULL
