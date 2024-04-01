@@ -10,10 +10,11 @@ CREATE TABLE users (
 	id 				INT 				PRIMARY KEY AUTO_INCREMENT
 	,name 			VARCHAR(50)	 	NOT NULL
 	,email 			VARCHAR(100)	NOT NULL UNIQUE
-	,created_at 	DATE 				NOT NULL DEFAULT CURRENT_DATE()
-	,updated_at 	DATE 				NOT NULL DEFAULT CURRENT_DATE()
-	,deleted_at 	DATE
+	,created_at 	DATE 				NOT NULL DEFAULT CURRENT_TIMESTAMP()
+	,updated_at 	DATE 				NOT NULL DEFAULT CURRENT_TIMESTAMP()
+	,deleted_aat 	DATE
 );
+
 
 -- 1-2 boards
 CREATE TABLE boards (
@@ -24,7 +25,6 @@ CREATE TABLE boards (
 	,created_at 	DATE 				NOT NULL DEFAULT CURRENT_DATE()
 	,updated_at 	DATE 				NOT NULL DEFAULT CURRENT_DATE()
 	,deleted_at 	DATE
-	,FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 
@@ -36,9 +36,13 @@ CREATE TABLE wishlists (
 	,created_at 	DATE 				NOT NULL DEFAULT CURRENT_DATE()
 	,updated_at 	DATE 				NOT NULL DEFAULT CURRENT_DATE()
 	,deleted_at 	DATE
-	,FOREIGN KEY (user_id) REFERENCES users(id)
-	,FOREIGN KEY (board_id) REFERENCES boards(id)
 );
+
+
+-- FK 추가
+ALTER TABLE boards ADD CONSTRAINT fk_boards_user_id FOREIGN KEY (user_id) REFERENCES users(id);
+ALTER TABLE wishlists ADD CONSTRAINT fk_wishlists_user_id FOREIGN KEY (user_id) REFERENCES users(id);
+ALTER TABLE wishlists ADD CONSTRAINT fk_wishlists_user_id FOREIGN KEY (board_id) REFERENCES boards(id);
 
 
 -- 2. boards 테이블에 아래 컬럼을 추가
@@ -47,6 +51,12 @@ ADD COLUMN views INT NOT NULL DEFAULT 0;
 
 
 -- 3. users 테이블에 아래 3명의 정보를 작성
+INSERT INTO USER(NAME,email)
+VALUES
+('홍길동','gildong@gmail.com')
+,('갑돌이','gapdol@gmail.com')
+,('갑순이','gapsun@gmail.com');
+
 INSERT INTO users(
 	name
 	,email
@@ -138,8 +148,8 @@ WHERE id = 1;
 
 
 -- 7. wishlists의 모든 데이터 물리적 삭제
-DROP TABLE wishlists;
+TRUNCATE TABLE wishlists;
 
 
 -- 8. 모든 테이블 제거
-DROP TABLE users, boards;
+DROP TABLE users, boards, wishlists;

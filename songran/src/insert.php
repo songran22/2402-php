@@ -1,7 +1,6 @@
 <?php
-// 설정 정보
-require_once($_SERVER["DOCUMENT_ROOT"]."/config.php"); // 최상단 위치
-require_once(FILE_LIB_DB); // DB관련 라이브러리
+require_once($_SERVER["DOCUMENT_ROOT"]."/songran/config.php");
+require_once(FILE_LIB_DB);
 
 // POST 처리
 if (REQUEST_METHOD === "POST") {
@@ -68,38 +67,44 @@ if (REQUEST_METHOD === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>작성 페이지</title>
-    <link rel="stylesheet" href="./css/common.css">
+    <title>my_page
+    </title>
+    <link rel="stylesheet" href="./css/common2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2721191331.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- 헤더 호출 -->
-    <?php require_once(FILE_HEADER); ?>
-
-    <main>
-        <form action="./insert.php" method="post">
-            <div class="main-middle">
-                <div class="line-item">
-                    <label class="line-title" for="title">
-                        <div>제목</div>
-                    </label>
-                    <div class="line-content">
-                        <input type="text" name="title" id="title">
+    <div class="container">
+        <?php require_once(FILE_HEADER); ?>
+        <div class="middle">
+            <main>
+                <form action="./insert.php" method="post">
+                    <div class="insert_content">
+                        <div class="line-item">
+                            <label class="line-title" for="title">
+                                <span>제목</span>
+                            </label>
+                            <div class="line-content">
+                                <input type="text" name="title" id="title" class="line_input">
+                            </div>
+                        </div>
+                        <div class="line-item">
+                            <label class="line-title" for="content">
+                                <div class="line-title-textarea">내용</div>
+                            </label>
+                            <div class="line-content">
+                                <textarea name="content" id="content" rows="10"></textarea>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="line-item">
-                    <label class="line-title" for="content">
-                        <div class="line-title-textarea">내용</div>
-                    </label>
-                    <div class="line-content">
-                        <textarea name="content" id="content" rows="10"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="main-bottom">
-                <button type="submit" class="a-button small-button">작성</button>
-                <a href="./index.html" class="a-button small-button">취소</a>
-            </div>
-        </form>
-    </main>
+                    <div class="btn_container">
+                        <button type="submit" class="content_btn">작성</button>
+                        <a href="./list.php" class="content_btn">취소</button></a>
+                    </div>     
+                </form>
+            </main>
+        </div>
+    </div>
 </body>
-</html>

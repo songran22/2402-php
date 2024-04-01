@@ -31,7 +31,7 @@
                         <span>주문/배송조회</span>
                     </div>
                 </a>
-                <a href="./detail.html">
+                <a href="./list.php">
                     <div class="info_icon">
                         <img src="./img/my_info_icon3.png" alt="">
                         <span>문의게시판</span>

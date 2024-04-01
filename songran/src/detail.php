@@ -1,7 +1,6 @@
 <?php
-// 설정 정보
-require_once($_SERVER["DOCUMENT_ROOT"]."/config.php"); // 설정 파일 호출
-require_once(FILE_LIB_DB); // DB관련 라이브러리
+require_once($_SERVER["DOCUMENT_ROOT"]."/songran/config.php");
+require_once(FILE_LIB_DB); 
 
 try {
     // DB connect
@@ -53,37 +52,41 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상세 페이지</title>
-    <link rel="stylesheet" href="./css/common.css">
+    <title>my_page
+    </title>
+    <link rel="stylesheet" href="./css/common2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2721191331.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- 헤더 호출 -->
-    <?php require_once(FILE_HEADER); ?>
-
-    <main>
-        <div class="main-middle">
-            <div class="line-item">
-                <div class="line-title">게시글 번호</div>
-                <div class="line-content"><?php echo $item["no"] ?></div>
-            </div>
-            <div class="line-item">
-                <div class="line-title">제목</div>
-                <div class="line-content"><?php echo $item["title"] ?></div>
-            </div>
-            <div class="line-item">
-                <div class="line-title">내용</div>
-                <div class="line-content"><?php echo $item["content"] ?></div>
-            </div>
-            <div class="line-item">
-                <div class="line-title">작성일자</div>
-                <div class="line-content"><?php echo $item["created_at"] ?></div>
-            </div>
-        </div>
-        <div class="main-bottom">
-            <a href="./update.php?no=<?php echo $no ?>&page=<?php echo $page ?>" class="a-button small-button">수정</a>
-            <a href="./list.php?page=<?php echo $page ?>" class="a-button small-button">취소</a>
-            <a href="./delete.php?no=<?php echo $no ?>&page=<?php echo $page ?>" class="a-button small-button">삭제</a>
-        </div>
-    </main>
+    <div class="container">
+        <?php require_once(FILE_HEADER); ?>
+        <div class="middle">
+            <main>
+                <div class="update_content">
+                    <div class="content_text">
+                        <p class="content_no">No.1</p>
+                        <p class="content_title">배송 문의드려요~!</p>
+                    </div>
+                    <div class="content_text2">
+                        <p class="content_detail_title">3월 3일 주문했는데, 배송이 아직 안와서요~
+                        배송 언제쯤 시작될까요?</p>
+                    </div>
+                    <div class="person_container">
+                        <div class="person_circle">
+                            <img src="./img/detail_person.png" alt="">
+                        </div>
+                    </div>             
+                    <p class="update_date">2024-03-24 13:57</p>   
+                    </div>     
+                <div class="btn_container">
+                    <a href="./update.php"><button type="submit" class="content_btn">수정</button></a>
+                    <a href="./list.php"><button type="submit" class="content_btn">취소</button></a>
+                    <a href="./delete.php"><button type="submit" class="content_btn">삭제</button></a>
+                </div>
+            </main>
+        </div>    
+    </div>
 </body>
-</html>

@@ -56,39 +56,43 @@ try {
 </head>
 <body>
     <div class="container">
-    <!-- 헤더 호출 -->
-    <?php require_once(FILE_HEADER); ?>
-    <main>
-        <div class="middle">
-            <?php
-            // 배열 루프
-            foreach($result as $item) {
-            ?>
+        <!-- 헤더 호출 -->
+        <?php require_once(FILE_HEADER); ?>
+        <main>
+            <div class="middle">
+                <?php
+                foreach($result as $item) {
+                ?>
+                    <div class="board_content">
+                        <a href="./detail.php?no=<?php echo $item["no"] ?>&page=<?php echo $page_num ?>">
+                            <div class="content_text">
+                                <div class="content_gird">
+                                    <div>
+                                        <p class="content_no"><?php echo "No.".$item["no"] ?></p>
+                                        <p class="content_title"><?php echo $item["title"] ?></p>
+                                    </div>
+                                    <div class="person_container">
+                                        <div class="person_circle">
+                                            <img src="./img/detail_person.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="content_date"><?php echo $item["created_at"] ?></p>
+                            </div>
+                        </a>
+                    </div>  
+                <?php
+                }
+                ?>
                 <div class="board_content">
-                    <div class="content_text">
-                        <p class="content_no"><?php echo "No.".$item["no"] ?></p>
-                        <p class="content_title"><a href="./detail.php?no=<?php echo $item["no"] ?>&page=<?php echo $page_num ?>"><?php echo $item["title"] ?></p>
-                    </div>
-                </div>
-                <div class="person_container">
-                    <div class="person_circle">
-                        <img src="./img/detail_person.png" alt="">
-                    </div>
-                </div>          
-                <p class="content_date"><?php echo $item["created_at"] ?></p>   
-            <?php
-            }
-            ?>
-        </div> 
-                <div class="board_content">
-                <a href="./insert.html"><button type="submit" class="insert_btn">
+                    <a href="./insert.php" class="insert_btn">
                         글쓰기<i class="fa-regular fa-pen-to-square"></i>
-                    </button></a>
+                    </a>
                 </div>
-        </div>
-    </main>
+            </div>
+        </main>
         <footer>
-            <br><br>
+            <br>
             <div class="pagination">
                 <a href="./list.php?page=<?php echo $prev_page_num ?>">&lt;</a>
                 <?php 
