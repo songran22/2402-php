@@ -1,6 +1,5 @@
 <?php
-// 설정 정보
-require_once($_SERVER["DOCUMENT_ROOT"]."/config.php"); // 설정 파일 호출
+require_once($_SERVER["DOCUMENT_ROOT"]."/songran/config.php"); // 최상단 위치
 require_once(FILE_LIB_DB); // DB관련 라이브러리
 
 try {
@@ -95,45 +94,48 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>삭제 페이지</title>
-    <link rel="stylesheet" href="./css/common.css">
+    <title>delete_page
+    </title>
+    <link rel="stylesheet" href="./css/common2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2721191331.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- 헤더 호출 -->
-    <?php require_once(FILE_HEADER); ?>
-
-    <main>
-        <div class="main-top center">
-            <p>삭제하면 영구적으로 복구 할 수 없습니다.
-                <br>
-                정말로 삭제 하시겠습니까?
-            </p>
-        </div>
-        <div class="main-middle">
-            <div class="line-item">
-                <div class="line-title">게시글 번호</div>
-                <div class="line-content"><?php echo $item["no"]; ?></div>
+    <div class="container">
+        <?php require_once(FILE_HEADER); ?>
+        <main>
+            <div class="main-top_center">
+                <p>삭제하면 영구적으로 복구 할 수 없습니다.
+                    <br>
+                    정말로 삭제 하시겠습니까?
+                </p>
             </div>
-            <div class="line-item">
-                <div class="line-title">제목</div>
-                <div class="line-content"><?php echo $item["title"]; ?></div>
+            <div class="middle">
+                <div class="delete_content">
+                    <div class="content_text">
+                        <p class="content_no"><?php echo "No.".$item["no"] ?></p>
+                        <p class="content_title"><?php echo $item["title"] ?></p>
+                    </div>
+                    <div class="content_text2">
+                        <p class="content_detail_title"><?php echo $item["content"] ?></p>
+                    </div>
+                    <div class="person_container e">
+                        <div class="person_circle">
+                            <img src="./img/detail_person.png" alt="">
+                        </div>
+                    </div>
+                    <p class="update_date"><?php echo $item["created_at"]; ?></p>   
+                </div>
+                <form action="./delete.php" method="post">    
+                    <div class="btn_container">
+                        <input type="hidden" name="no" value="<?php echo $no; ?>">
+                        <button type="submit" class="content_btn">동의</button>
+                        <a href="./detail.php?no=<?php echo $no; ?>&page=<?php echo $page; ?>" class="content_btn">취소</a>
+                    </div>
+                </form>
             </div>
-            <div class="line-item">
-                <div class="line-title">내용</div>
-                <div class="line-content"><?php echo $item["content"]; ?></div>
-            </div>
-            <div class="line-item">
-                <div class="line-title">작성일자</div>
-                <div class="line-content"><?php echo $item["created_at"]; ?></div>
-            </div>
-        </div>
-        <form action="./delete.php" method="post">
-            <div class="main-bottom">
-                <input type="hidden" name="no" value="<?php echo $no; ?>">
-                <button type="submit" class="a-button small-button">동의</button>
-                <a href="./detail.php?no=<?php echo $no; ?>&page=<?php echo $page; ?>" class="a-button small-button">취소</a>
-            </div>
-        </form>
-    </main>
+        </main>
+    </div>
 </body>
-</html>

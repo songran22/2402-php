@@ -46,7 +46,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my_page
+    <title>list_page
     </title>
     <link rel="stylesheet" href="./css/common2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,12 +71,12 @@ try {
                                         <p class="content_no"><?php echo "No.".$item["no"] ?></p>
                                         <p class="content_title"><?php echo $item["title"] ?></p>
                                     </div>
+                                </div>
                                     <div class="person_container">
                                         <div class="person_circle">
                                             <img src="./img/detail_person.png" alt="">
                                         </div>
                                     </div>
-                                </div>
                                 <p class="content_date"><?php echo $item["created_at"] ?></p>
                             </div>
                         </a>

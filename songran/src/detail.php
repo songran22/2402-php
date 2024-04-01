@@ -52,7 +52,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my_page
+    <title>detail_page
     </title>
     <link rel="stylesheet" href="./css/common2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,24 +67,23 @@ try {
             <main>
                 <div class="update_content">
                     <div class="content_text">
-                        <p class="content_no">No.1</p>
-                        <p class="content_title">배송 문의드려요~!</p>
+                        <p class="content_no"><?php echo "No.".$item["no"] ?></p>
+                        <p class="content_title"><?php echo $item["title"] ?></p>
                     </div>
                     <div class="content_text2">
-                        <p class="content_detail_title">3월 3일 주문했는데, 배송이 아직 안와서요~
-                        배송 언제쯤 시작될까요?</p>
+                        <p class="content_detail_title"><?php echo $item["content"] ?></p>
                     </div>
-                    <div class="person_container">
+                    <div class="person_container e">
                         <div class="person_circle">
                             <img src="./img/detail_person.png" alt="">
                         </div>
                     </div>             
-                    <p class="update_date">2024-03-24 13:57</p>   
+                    <p class="update_date"><?php echo $item["created_at"] ?></p>   
                     </div>     
                 <div class="btn_container">
-                    <a href="./update.php"><button type="submit" class="content_btn">수정</button></a>
-                    <a href="./list.php"><button type="submit" class="content_btn">취소</button></a>
-                    <a href="./delete.php"><button type="submit" class="content_btn">삭제</button></a>
+                    <a href="./update.php?no=<?php echo $no ?>&page=<?php echo $page ?>" class="content_btn">수정</a>
+                    <a href="./list.php?page=<?php echo $page ?>" class="content_btn">취소</a>
+                    <a href="./delete.php?no=<?php echo $no ?>&page=<?php echo $page ?>" class="content_btn">삭제</a>
                 </div>
             </main>
         </div>    
